@@ -160,7 +160,7 @@ var questions = [
         "What does the solid white line at the side of the road indicate?": [
             "Edge of the carriageway",
             "Traffic lights ahead",
-            "Footpath on the left"
+            "Footpath on the left",
             "Cycle path"
         ]
     },
@@ -313,7 +313,7 @@ var questions = [
             "On loose road surfaces",
             "In foggy conditions",
             "At night on unlit roads",
-            "On dry tarmac
+            "On dry tarmac"
         ]
     },
     {
@@ -403,7 +403,7 @@ var questions = [
             "You, the driver",
             "The children's parents",
             "The front-seat passenger",
-            "The children""
+            "The children"
         ]
     },
     {
@@ -439,7 +439,7 @@ var questions = [
         ]
     },
     {
-        "A bus lane on your left shows no times of operation. This means it is:" [
+        "A bus lane on your left shows no times of operation. This means it is:": [
             "In operation 24 hours a day",
             "Not in operation at all",
             "Only in operation at peak times",
