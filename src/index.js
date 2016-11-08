@@ -9,8 +9,7 @@
  */
 
 /**
- * This sample shows how to create a simple Trivia skill with a multiple choice format. The skill
- * supports 1 player at a time, and does not support games across sessions.
+ * This skill supports 1 player at a time, and does not support games across sessions.
  */
 
 'use strict';
@@ -767,14 +766,9 @@ exports.handler = function (event, context) {
     try {
         console.log("event.session.application.applicationId=" + event.session.application.applicationId);
 
-        /**
-         * Uncomment this if statement and populate with your skill's application ID to
-         * prevent someone else from configuring a skill that sends requests to this function.
-         */
-
-//     if (event.session.application.applicationId !== "amzn1.echo-sdk-ams.app.05aecccb3-1461-48fb-a008-822ddrt6b516") {
-//         context.fail("Invalid Application ID");
-//      }
+        if (event.session.application.applicationId !== "amzn1.ask.skill.51a1d7e9-c86d-4fe6-b357-8b5d13b38ce6") {
+         context.fail("Invalid Application ID");
+        }
 
         if (event.session.new) {
             onSessionStarted({requestId: event.request.requestId}, event.session);
@@ -881,8 +875,8 @@ function onSessionEnded(sessionEndedRequest, session) {
 // ------- Skill specific business logic -------
 
 var ANSWER_COUNT = 4;
-var GAME_LENGTH = 5;
-var CARD_TITLE = "Trivia"; // Be sure to change this for your skill.
+var GAME_LENGTH = 10;
+var CARD_TITLE = "UK Driving Theory"; // Be sure to change this for your skill.
 
 function getWelcomeResponse(callback) {
     var sessionAttributes = {},
