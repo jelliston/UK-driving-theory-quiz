@@ -9,7 +9,7 @@
  */
 
 /**
- * This skill supports 1 player at a time, and does not support games across sessions.
+ * This skill supports 1 player at a time, and does not support quizes across sessions.
  */
 
 'use strict';
@@ -981,10 +981,10 @@ function handleAnswerRequest(intent, session, callback) {
     var userGaveUp = intent.name === "DontKnowIntent";
 
     if (!gameInProgress) {
-        // If the user responded with an answer but there is no game in progress, ask the user
-        // if they want to start a new game. Set a flag to track that we've prompted the user.
+        // If the user responded with an answer but there is no quiz in progress, ask the user
+        // if they want to start a new quiz. Set a flag to track that we've prompted the user.
         sessionAttributes.userPromptedToContinue = true;
-        speechOutput = "There is no game in progress. Do you want to start a new game? ";
+        speechOutput = "There is no quiz in progress. Do you want to start a new quiz? ";
         callback(sessionAttributes,
             buildSpeechletResponse(CARD_TITLE, speechOutput, speechOutput, false));
     } else if (!answerSlotValid && !userGaveUp) {
@@ -1012,7 +1012,7 @@ function handleAnswerRequest(intent, session, callback) {
             }
             speechOutputAnalysis += "The correct answer is " + correctAnswerIndex + ": " + correctAnswerText + ". ";
         }
-        // if currentQuestionIndex is 4, we've reached 5 questions (zero-indexed) and can exit the game session
+        // if currentQuestionIndex is 4, we've reached 5 questions (zero-indexed) and can exit the quiz session
         if (currentQuestionIndex == GAME_LENGTH - 1) {
             speechOutput = userGaveUp ? "" : "That answer is ";
             speechOutput += speechOutputAnalysis + "You got " + currentScore.toString() + " out of "
@@ -1052,7 +1052,7 @@ function handleAnswerRequest(intent, session, callback) {
 
 function handleRepeatRequest(intent, session, callback) {
     // Repeat the previous speechOutput and repromptText from the session attributes if available
-    // else start a new game session
+    // else start a new quiz session
     if (!session.attributes || !session.attributes.speechOutput) {
         getWelcomeResponse(callback);
     } else {
@@ -1062,7 +1062,7 @@ function handleRepeatRequest(intent, session, callback) {
 }
 
 function handleGetHelpRequest(intent, session, callback) {
-    // Provide a help prompt for the user, explaining how the game is played. Then, continue the game
+    // Provide a help prompt for the user, explaining how the quiz is played. Then, continue the quiz
     // if there is one in progress, or provide the option to start another one.
     
     // Ensure that session.attributes has been initialized
@@ -1076,7 +1076,7 @@ function handleGetHelpRequest(intent, session, callback) {
     // Do not edit the help dialogue. This has been created by the Alexa team to demonstrate best practices.
 
     var speechOutput = "I will ask you " + GAME_LENGTH + " multiple choice questions. Respond with the number of the answer. "
-        + "For example, say one, two, three, or four. To start a new game at any time, say, start game. "
+        + "For example, say one, two, three, or four. To start a new quiz at any time, say, start quiz. "
         + "To repeat the last question, say, repeat. "
         + "Would you like to keep playing?",
         repromptText = "To give an answer to a question, respond with the number of the answer . "
@@ -1087,7 +1087,7 @@ function handleGetHelpRequest(intent, session, callback) {
 }
 
 function handleFinishSessionRequest(intent, session, callback) {
-    // End the session with a "Good bye!" if the user wants to quit the game
+    // End the session with a "Good bye!" if the user wants to quit the quiz
     callback(session.attributes,
         buildSpeechletResponseWithoutCard("Good bye!", "", true));
 }
