@@ -205,10 +205,10 @@ var questions = [
     },
     {
         "You will find that driving smoothly can:": [
-            "Reduce fuel consumption by about 15 percent",
-            "Reduce journey times by about 15 percent",
-            "Increase fuel consumption by about 15 percent",
-            "Increase journey times by about 15 percent"
+            "Reduce fuel consumption by about fifteen percent",
+            "Reduce journey times by about fifteen percent",
+            "Increase fuel consumption by about fifteen percent",
+            "Increase journey times by about fifteen percent"
         ]
     },
     {
@@ -278,7 +278,7 @@ var questions = [
     {
         "When may you use hazard warning lights when driving?": [
             "On a motorway or unrestricted dual carriageway, to warn of a hazard ahead",
-            "Instead of sounding the horn in a built-up area between 11.30 pm and 7 am",
+            "Instead of sounding the horn in a built-up area, between eleven-thirty p.m. and seven a.m.",
             "On rural routes, after a warning sign of animals",
             "On the approach to toucan crossings where cyclists are waiting to cross"
         ]
@@ -301,10 +301,10 @@ var questions = [
     },
     {
         "A single carriageway road has the national speed limit sign. What is the maximum permitted speed for a car towing a trailer?": [
-            "50 miles per hour",
-            "30 miles per hour",
-            "40 miles per hour",
-            "60 miles per hour"
+            "fifty miles per hour",
+            "thirty miles per hour",
+            "forty miles per hour",
+            "sixty miles per hour"
         ]
     },
     {
@@ -333,10 +333,10 @@ var questions = [
     },
     {
         "How old must you be to supervise a learner driver?": [
-            "21 years old",
-            "18 years old",
-            "19 years old",
-            "20 years old"
+            "twenty-one years old",
+            "eighteen years old",
+            "nineteen years old",
+            "twenty years old"
         ]
     },
     {
@@ -407,10 +407,10 @@ var questions = [
     },
     {
         "What is the national speed limit for cars and motorcycles in the centre lane of a three-lane motorway?": [
-            "70 miles per hour",
-            "40 miles per hour",
-            "50 miles per hour",
-            "60 miles per hour"
+            "seventy miles per hour",
+            "forty miles per hour",
+            "fifty miles per hour",
+            "sixty miles per hour"
         ]
     },
     {
@@ -439,7 +439,7 @@ var questions = [
     },
     {
         "A bus lane on your left shows no times of operation. This means it is:": [
-            "In operation 24 hours a day",
+            "In operation twenty-four hours a day",
             "Not in operation at all",
             "Only in operation at peak times",
             "Only in operation in daylight hours"
@@ -505,7 +505,7 @@ var questions = [
         "You are on a fast, open road in good conditions. For safety, the distance between you and the vehicle in front should be:": [
             "A two-second time gap",
             "One car length",
-            "2 metres (6 feet 6 inches)",
+            "two metres (six feet six inches)",
             "Two car lengths"
         ]
     },
@@ -543,10 +543,10 @@ var questions = [
     },
     {
         "You have broken down on a two-way road. You have a warning triangle. You should place the warning triangle at least how far from your vehicle?": [
-            "45 metres (147 feet)",
-            "5 metres (16 feet)",
-            "25 metres (82 feet)",
-            "100 metres (328 feet)"
+            "forty-five metres (one-hundred-and-forty-seven feet)",
+            "five metres (sixteen feet)",
+            "twenty-eight metres (eighty-two feet)",
+            "one-hundred metres (three-hundred-and-twenty-eight feet)"
         ]
     },
     {
@@ -608,7 +608,7 @@ var questions = [
     {
         "As a provisional licence holder you should not drive a car:": [
             "On the motorway",
-            "Over 30 miles per hour",
+            "Over thirty miles per hour",
             "At night",
             "With passengers in rear seats"
         ]
@@ -752,10 +752,10 @@ var questions = [
     {
         
         "You are towing a trailer on a motorway. What is your maximum speed limit?": [
-            "60 miles per hour",
-            "40 miles per hour",
-            "50 miles per hour",
-            "70 miles per hour"
+            "sixty miles per hour",
+            "forty miles per hour",
+            "fifty miles per hour",
+            "seventy miles per hour"
         ]
     }
 ];
